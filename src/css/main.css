@@ -1,0 +1,189 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: rgb(233, 229, 229);
+}
+
+/* NAVBAR components */
+
+.white-top {
+    width: 100%;
+    height: 40px;
+}
+
+.white-top .logo {
+    margin-left : 20px;
+    margin-top: 15px;
+}
+.white-top .brandName {
+    margin-left : 100px;
+    margin-top: 15px;
+    font-size: 120%;
+}
+
+.blueAndButtons {
+    background-color: rgb(8, 85, 85);
+    width: 100%;
+    height: 70px;
+    position: relative;
+}
+
+.blueAndButtons a {
+    text-decoration: none;
+    color: rgb(8, 85, 85);
+    border-radius: 50px;
+    font-size: 80%;
+    font-weight: bold;
+}
+
+.activePage {
+    color: #093636;
+    background: white;
+}
+
+.logInAndSignup {
+    display: block;
+    margin: auto;
+    width: 200px;
+    top: 42px;
+}
+
+.blueAndButtons button{
+    border-radius: 15px;
+    width: 100px;
+}
+
+.signupBtn:hover {
+    background-color: white;
+    font-size: 110%;
+}
+
+.loginBtn:hover {
+    background-color: white;
+    font-size: 100%;
+}
+
+
+/* SIGNUP : styles  */
+
+.signupWrapper {
+    width: 400px;
+    height: 470px;
+    margin: 0 auto;
+    background-color: rgb(255, 255, 255);
+    box-shadow:  0px 0px 1px 1px  rgb(196, 193, 193);
+}
+.signup-header {
+    text-align: center;
+    margin-top: 50px;
+    font-weight: bold;
+}
+.signupWrapper form{
+    margin: 0 auto;
+    margin-top: 15px;
+    width: 60%;
+}
+
+
+.signupWrapper form input[type="text"],
+.signupWrapper form input[type="password"] {
+    display: block;
+    width: 100%;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    height: 30px;
+    border: 1.5px solid rgb(187, 179, 179);
+    padding-left: 25px;
+    font-size: 90%;
+    color: rgb(80, 77, 80);
+}
+
+.signupUsLabel {
+    text-transform: uppercase;
+    font-size: 90%;
+    color: rgb(10, 68, 68);
+    font-weight: bold;
+}
+
+
+.signupWrapper form input[type="radio"] {
+    opacity: 0;
+    position: fixed;
+    width: 0;
+}
+
+.radioWrapper .radio {
+    display: inline-block;
+    background-color: rgb(255, 255, 255);
+    padding: 8px 30px;
+    font-size: 100%;
+    border-radius: 4px;
+    width: 120px;
+    height: 40px;
+    border: 1px solid rgb(146, 148, 147);
+    color: rgb(8, 70, 70);
+}
+
+.radioWrapper .radio:hover {
+   background-color: rgb(233, 225, 225);
+}
+
+.signup-btn {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+}
+
+.signup-btn button{
+   width: 240px;
+   border-radius: 10px;
+   background-color: rgb(13, 100, 100);
+   margin-bottom: 15px;
+}
+
+.signup-btn button:hover{
+    border-radius: 10px;
+    background-color: rgb(14, 70, 70);
+}
+
+.linesAndOr {
+    margin: 0 auto;
+    position: relative;
+    width: 240px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.line {
+    width: 105px;
+    height: 1px;
+    background-color: rgb(97, 105, 105);
+}
+
+.or{
+    position: absolute;
+    top: -9px;
+    left: 112px;
+}
+
+
+.google-btn {
+    width: 240px;
+    margin: 0 auto;
+}
+.google-btn button{
+    margin-top: 20px;
+    width: 240px;
+    border-radius: 10px;
+}
+
+.google-btn button:hover{
+    background-color: rgb(18, 50, 155);
+    border: 1px solidrgb(18, 50, 155);
+}
