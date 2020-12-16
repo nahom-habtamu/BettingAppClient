@@ -9,7 +9,7 @@ import createSagaMiddleware from 'redux-saga';
 import './bootstrap/css/bootstrap.min.css';
 import './css/main.css'; 
 
-// import  watchSaga from './sagas';
+import  watchSaga from './sagas';
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -21,7 +21,9 @@ const store = createStore(
     reducers,
     composeEnhancers(applyMiddleware(sagaMiddleware))
 );
-// sagaMiddleware.run(watchSaga);
+
+sagaMiddleware.run(watchSaga);
+
 ReactDOM.render(
     <Provider store={store}>
         <App/>

@@ -36,7 +36,7 @@ export default class NavBar extends Component {
                                         backgroundColor : 
                                         this.props.activePage === "signup" ? "white" : "",
                                         color : 
-                                        this.props.activePage === "signup" ? "#093636" : "black"
+                                        this.props.activePage === "signup" ? "#093636" : ""
                                 
                                     }} 
                                     className="btn btn-default loginBtn">

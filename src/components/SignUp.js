@@ -1,18 +1,23 @@
 import React, { Component } from 'react'
 import NavBar from './NavBar'
+import { connect } from 'react-redux';
+import { getUsersInitiate, addUserInitiate} from '../actions';
 
-export default class SignUp extends Component {
+class SignUp extends Component {
     state = {
         data : {
             fullName : "",
             email : "",
             password : "",
-            userOrAgent : ""
+            role : ""
         },
 
         errors : {
 
         }
+    }
+    componentDidMount(){
+        this.props.getUsersInitiate();
     }
 
     handleChange = (event) => {
@@ -26,7 +31,8 @@ export default class SignUp extends Component {
 
     handleUserOrAgent = (event) => {
         const falseState = { ...this.state.data};
-        falseState["userOrAgent"] = event.target.value;
+        falseState["role"] = event.target.value;
+        console.log(event.target.value);
         this.setState({
             data : falseState
         });
@@ -35,6 +41,7 @@ export default class SignUp extends Component {
     handleSubmit = (event) => {
         event.preventDefault();
         console.log(this.state.data);
+        this.props.addUserInitiate(this.state.data);
     }
     render() {
 
@@ -76,26 +83,26 @@ export default class SignUp extends Component {
 
                             <label
                                 style = {{ 
-                                    backgroundColor : this.state.data.userOrAgent === "user" ? "#093636" : "lightgray",
-                                    color : this.state.data.userOrAgent === "user" ? "white" : "#093636",
+                                    backgroundColor : this.state.data.role === "user" ? "#093636" : "lightgray",
+                                    color : this.state.data.role === "user" ? "white" : "#093636",
                                 }} 
                                 htmlFor="user" 
                                 className= "radio"
                                 name="user">
                                 User
                             </label>
-                            <input type="radio" name="userOrAgent" value="user" id="user"/>
+                            <input type="radio" name="role" value="user" id="user"/>
 
                             <label 
                                 style = {{ 
-                                        backgroundColor : this.state.data.userOrAgent === "agent" ? "#093636" : "lightgray",
-                                        color : this.state.data.userOrAgent === "agent" ? "white" : "#093636",
+                                        backgroundColor : this.state.data.role === "agent" ? "#093636" : "lightgray",
+                                        color : this.state.data.role === "agent" ? "white" : "#093636",
                                     }} 
                                 className= "radio" 
                                 htmlFor="agent"
                                 >Agent
                             </label>
-                            <input type="radio" name="userOrAgent" value="agent" id="agent"/>
+                            <input type="radio" name="role" value="agent" id="agent"/>
 
                         </div>
 
@@ -120,3 +127,11 @@ export default class SignUp extends Component {
         )
     }
 }
+
+const mapStateToProps = (state) => {
+    return {
+        user : state.users
+    }
+}
+
+export default connect(mapStateToProps, { getUsersInitiate, addUserInitiate })(SignUp);
