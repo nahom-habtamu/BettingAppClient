@@ -1,5 +1,7 @@
 import React, { Component } from 'react'
 import NavBar from './NavBar';
+import api from '../apis';
+
 export default class Login extends Component {
     state = {
         data : {
@@ -9,6 +11,31 @@ export default class Login extends Component {
 
         errors : {
 
+        }
+    }
+    handleChange = (event) => {
+        const falseState = {...this.state.data};
+        falseState[event.target.name] = event.target.value;
+        this.setState({
+            data : falseState
+        });
+
+    }
+
+    handleSubmit = async (event) => {
+        event.preventDefault();
+        try {     
+            const token = await api.post('/auth', this.state.data);
+            if(token){
+                console.log(token);
+                this.props.history.push('/main');
+            }
+            else {
+                throw new Error('JWT Not Found');
+            }
+        } 
+        catch (error) {
+            console.log(error.message);
         }
     }
     render() {
@@ -38,7 +65,7 @@ export default class Login extends Component {
 
                         />
                         <div className="signup-btn">
-                            <button className="btn btn-info">Sign Up</button>
+                            <button className="btn btn-info">Sign In</button>
                         </div>
 
                     </form>
@@ -50,7 +77,7 @@ export default class Login extends Component {
                     </div>
 
                     <div className="google-btn">
-                        <button className="btn btn-primary">Sign Up With Google</button>
+                        <button className="btn btn-primary">Sign In With Google</button>
                     </div>
 
                 </div>
