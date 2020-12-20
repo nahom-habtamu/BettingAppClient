@@ -17,38 +17,57 @@ export default class StatusList extends Component {
             </div>
                 
                 <div className="container status-list">
-                    <Status
-                        count= "1"
-                        statusName="Active Bets"
-                        iconName="active"
-                    />
-                    
-                    <Status
-                        count= "1"
-                        statusName="Active Bets"
-                        iconName="active"
-                    />   
+                    <div className="row">
+                        <div className="col-3-lg col-4-md col-6-sm col-6-xs">
+                            <Status
+                                count= "1"
+                                statusName="Active Bets"
+                                iconName="active"
+                            />
+                        </div>
+                        <div className="col-3-lg col-4-md col-6-sm col-6-xs">
+                            <Status
+                                count= "1"
+                                statusName="Active Bets"
+                                iconName="active"
+                            /> 
+                        </div>
+                        
+                        <div className="col-3-lg col-4-md col-6-sm col-12-xs">
+                            <Status
+                                count= "1"
+                                statusName="Lost"
+                                iconName="thumbs-down"
+                            />
+                        </div>
+                        
+                        <div className="col-3-lg col-4-md col-6-sm col-6-xs">
+                            <Status
+                                count= "3"
+                                statusName="Wins"
+                                iconName="dollar-sign"
+                            />
+                        </div> 
+                        <div className="col-3-lg col-4-md col-6-sm col-6-xs">                              
+                            <Status
+                                count= "10"
+                                statusName="Disputes"
+                                iconName="dispute"
+                            />
+                        </div>
 
-                    <Status
-                        count= "1"
-                        statusName="Lost"
-                        iconName="thumbs-down"
-                    />
-
-                    <Status
-                        count= "3"
-                        statusName="Wins"
-                        iconName="dollar-sign"
-                    />
-                                                    
-                    <Status
-                        count= "10"
-                        statusName="Disputes"
-                        iconName="dispute"
-                    />
-                    
+                    </div>
                 </div>
             </div>
         )
     }
 }
+
+
+                  
+                    
+                     
+
+                   
+
+                     

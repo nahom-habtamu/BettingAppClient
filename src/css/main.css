@@ -10,10 +10,11 @@ body {
     background-color: rgb(233, 229, 229);
 }
 
-.container {
+.myContainer {
     width: 1200px;
     margin: 0 auto;
 }
+
 
 /* NAVBAR components */
 
@@ -33,7 +34,7 @@ body {
 }
 
 .blueAndButtons {
-    background-color: rgb(8, 85, 85);
+    background-color: rgb(14, 110, 110);
     width: 100%;
     height: 70px;
     position: relative;
@@ -41,7 +42,7 @@ body {
 
 .blueAndButtons a {
     text-decoration: none;
-    color: rgb(8, 85, 85);
+    color: rgb(14, 110, 110);
     border-radius: 50px;
     font-size: 80%;
     font-weight: bold;
@@ -145,13 +146,13 @@ body {
 .signup-btn button{
    width: 240px;
    border-radius: 10px;
-   background-color: rgb(13, 100, 100);
+   background-color: rgb(14, 110, 110);
    margin-bottom: 15px;
 }
 
 .signup-btn button:hover{
     border-radius: 10px;
-    background-color: rgb(14, 70, 70);
+    background-color: rgb(14, 110, 110);
 }
 
 .linesAndOr {
@@ -286,7 +287,7 @@ body {
     border: 1px solid rgb(137, 173, 173);
     background-color: rgb(203, 223, 223);
     border-radius: 300px;
-    color: rgb(17, 104, 104);
+    color: rgb(14, 110, 110);
 }
 
 /*  Your Bets And Search Button  */
@@ -300,9 +301,10 @@ body {
 
 .your-bets {
     font-size: 200%;
-    color: rgb(10, 68, 68);
+    color: rgb(14, 110, 110);
     font-weight: 600;
     text-transform: capitalize;
+    margin-top: 12px;
 }
 
 .search input{
@@ -321,6 +323,7 @@ body {
 .status-wrapper {
     width: 190px;
     height: 120px;
+    margin-right: 38px;
     background-color: white;
     box-shadow:  0px 0px 1px 1px  rgb(196, 193, 193);
     border-radius: 5px;
@@ -328,6 +331,7 @@ body {
     align-items: center;
     justify-content: space-around;
     transition: all 0.5s ease;
+    margin-bottom: 50px;
 }
 
 .count {
@@ -344,11 +348,11 @@ body {
     padding: 8px 12px;
     border-radius: 200px;
     background-color: rgb(139, 184, 184);
-    color :rgb(10, 68, 68);
+    color :rgb(14, 110, 110);
 }
 
 .status-wrapper:hover{
-    background-color: rgb(10, 68, 68);
+    background-color: rgb(14, 110, 110);
 }
 
 .status-wrapper:hover .status-icon {
@@ -364,7 +368,166 @@ body {
 }
 
 .status-list {
+    margin-left: 112px;
+}
+
+
+/* BOXES  */
+
+.betList {
+    margin-left: 100px;
+}
+
+.box {
+    margin-bottom: 50px;
+    width: 300px;
+    height: 320px;
+    box-shadow:  0px 0px 1px 1px  rgb(196, 193, 193);
+    background-color: white;
+    border-radius: 10px;
+}
+
+.blue-line {
+    background-color:rgb(14, 110, 110);
+    width: 100%;
+    height: 8px;
+    border-radius: 3px;
+}
+
+.setup-bet {
+    margin-top: 35px;
+    text-align: center;
+    color: rgb(14, 110, 110);
+    font-weight: 600;
+}
+
+.addBetIcon {
+    border: none;
+    background: transparent;
+    color: rgb(14, 110, 110);
+    margin-left: 100px;
+    margin-top: 25px;
+} 
+
+
+
+.initiate-bet-button {
+    margin-top: 77px;
+    margin-left: 95px;
+    font-size: 90%;
+    padding: 2px 30px;
+    background-color: rgb(14, 110, 110);
+    color: white;
+    border: none;
+    border-radius: 20px;
+}
+
+/*  BET ALREADY CREATED */
+
+.hostAndMember {
+    margin-top: 20px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
+}
+
+.key {
+    color: rgba(107, 103, 103, 0.603);
+    font-size: 85%;
+}
+
+.value {
+    font-weight: 800;
+    font-size: 95%;
+}
+
+.mem {
+    margin-left: 20px;
+}
+
+.witCatAndDays {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.moneyAndAmount {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.money {
+    color:rgb(14, 110, 110);
+    font-size: 110%;
+    font-weight:900;
+}
+
+.dateWrapper {
+    margin-top: 10px;
+    display: flex;
+    margin-left: 25px;
+}
+
+.view-button {
+    margin-top: 20px;
+    margin-left: 95px;
+    font-size: 90%;
+    padding: 2px 30px;
+    background-color: rgb(14, 110, 110);
+    color: white;
+    border: none;
+    border-radius: 20px;
+}
+
+/*  RESPONSIVE DESIGNS  */
+
+@media only screen and (max-width: 600px) {
+    
+    .status-list {
+        margin-left: 20px;
+    }
+
+    .status-wrapper {
+        width: 160px;
+        height: 120px;
+        margin-right: 20px;
+        background-color: white;
+        box-shadow:  0px 0px 1px 1px  rgb(196, 193, 193);
+        border-radius: 5px;
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        transition: all 0.5s ease;
+        margin-bottom: 50px;
+    }
+
+    .betList {
+        margin-left: 20px;
+    }
+    
+}
+
+
+@media only screen and (max-width: 1100px) {
+    .your-bets {
+        font-size: 100%;
+        color: rgb(10, 68, 68);
+        font-weight: 600;
+        text-transform: capitalize;
+        margin-top: 5px;
+    }
+    .search input{
+        font-size: 100%;
+        padding: 5px 2px;
+        width: 200px;
+        border: none;
+        border-bottom: 1.5px solid rgb(117, 122, 122);
+        background: transparent;
+        color: gray;
+    }
+
+    .betList {
+        margin-left: 50px;
+    }
+    
 }
 
