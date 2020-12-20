@@ -13,7 +13,7 @@ export default class App extends Component {
                         <Route path="/" exact component = {Login}/>
                         <Route path="/signup" exact component = {SignUp}/>
                         <Route path="/login" exact component = {Login}/>
-                        <Route path="/main" exact componet = { Main }/>
+                        <Route path="/main" exact component = { Main }/>
                     </div>
                 </BrowserRouter>
             </React.Fragment>

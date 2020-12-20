@@ -22,9 +22,12 @@ export default class Login extends Component {
 
     }
 
+    // JWT json web token 
+
     handleSubmit = async (event) => {
         event.preventDefault();
         try {     
+
             const token = await api.post('/auth', this.state.data);
             if(token){
                 console.log(token);
@@ -38,6 +41,7 @@ export default class Login extends Component {
             console.log(error.message);
         }
     }
+
     render() {
         return (
             <div>
