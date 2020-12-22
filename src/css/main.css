@@ -290,6 +290,11 @@ body {
     color: rgb(14, 110, 110);
 }
 
+.icon-button:hover {
+    color: white;
+    background-color: rgb(10, 68, 68);
+}
+
 /*  Your Bets And Search Button  */
 
 .searchAndYourBets{
@@ -538,6 +543,11 @@ body {
     font-size: 90%;
     color: rgba(117, 122, 122, 0.459);
 }
+
+
+/* PROFILE PAGE STYLES  */
+
+
 
 
 

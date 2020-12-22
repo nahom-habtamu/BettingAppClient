@@ -1,4 +1,5 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { FaBell, FaUserAlt} from 'react-icons/fa';
 
 export default class MainTop extends Component {
@@ -20,12 +21,12 @@ export default class MainTop extends Component {
                     </div>
 
                     <div className="top-buttons">
-                        <button className="icon-button">
+                        <Link to="/notification" className="icon-button">
                             <FaBell size="1.5em" color="bluegreen"/>
-                        </button>
-                        <button className="icon-button">
+                        </Link>
+                        <Link to="/profile" className="icon-button">
                             <FaUserAlt size="1.5em" color="bluegreen"/>
-                        </button>
+                        </Link>
                     </div>
                 </div>
             </div>

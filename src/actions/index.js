@@ -29,3 +29,19 @@ export const addUser = (formValues) => {
         payload : formValues
     }
 }
+
+
+// BET ACTIONS 
+
+export const getBetsInitiate = () => {
+    return {
+        type : "GET_BETS_INITIATE"
+    }
+}
+
+export const getBets = (data) => {
+    return {
+        type : "GET_BETS",
+        payload : data
+    }
+}
