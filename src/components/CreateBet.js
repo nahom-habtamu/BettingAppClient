@@ -1,5 +1,5 @@
-import React, { Component } from 'react'
-import { AiFillFileAdd } from 'react-icons/ai'
+import React, { Component } from 'react';
+import { AiFillFileAdd } from 'react-icons/ai';
 export default class CreateBet extends Component {
     render() {
         return (
