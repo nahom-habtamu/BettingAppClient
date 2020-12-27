@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { AiFillFileAdd } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 export default class CreateBet extends Component {
     render() {
         return (
@@ -14,7 +15,7 @@ export default class CreateBet extends Component {
                     </div>
                     <button 
                         className="initiate-bet-button">
-                        Initiate
+                        <Link to="/addBet">Initiate</Link>
                     </button>
                 </div>
             </div>

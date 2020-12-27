@@ -30,7 +30,8 @@ export default class Login extends Component {
 
             const token = await api.post('/auth', this.state.data);
             if(token){
-                console.log(token);
+                console.log(token.data);
+                localStorage.setItem("token",token.data);
                 this.props.history.push('/main');
             }
             else {

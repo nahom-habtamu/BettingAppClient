@@ -17,7 +17,7 @@ export default class MainTop extends Component {
                     </div>
 
                     <div className="dashboard">
-                        <div className="dashboard-text">Dashboard</div>
+                        <div className="dashboard-text">{this.props.topHeader}</div>
                     </div>
 
                     <div className="top-buttons">

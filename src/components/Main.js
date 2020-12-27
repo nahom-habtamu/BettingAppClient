@@ -8,7 +8,7 @@ export default class Main extends Component {
     render() {
         return (
             <div>
-                <MainTop/>
+                <MainTop topHeader="Dashboard"/>
                 <StatusList/> 
                 <BetList/>
                 <NotificationList/>

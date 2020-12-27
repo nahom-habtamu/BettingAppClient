@@ -427,6 +427,16 @@ body {
     border-radius: 20px;
 }
 
+.initiate-bet-button a {
+    text-decoration: none;
+    color: white;
+}
+
+
+.initiate-bet-button:hover{
+    background-color: rgb(10, 63, 63);
+}
+
 /*  BET ALREADY CREATED */
 
 .hostAndMember {
@@ -545,7 +555,7 @@ body {
 }
 
 
-/* PROFILE PAGE STYLES  */
+/* START BET PAGE STYLES  */
 
 
 

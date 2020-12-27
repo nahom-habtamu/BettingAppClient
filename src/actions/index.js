@@ -45,3 +45,17 @@ export const getBets = (data) => {
         payload : data
     }
 }
+
+export const addBetInitiate = (formValues) => {
+    return {
+        type : "ADD_BET_INITIATE",
+        payload : formValues
+    }
+}
+
+export const addBet = (formValues) => {
+    return {
+        type : "ADD_BET",
+        payload : formValues
+    }
+}
