@@ -557,11 +557,89 @@ body {
 
 /* START BET PAGE STYLES  */
 
+.start-bet {
+    font-size: 170%;
+    color: rgb(10, 68, 68);
+    font-weight: 500;
+    margin: 50px 0px;
+}
 
+.date-header {
+    font-size: 120%;
+    font-weight: 700;
+}
 
+.main-box {
+    margin-top: 25px;
+    width: 400px;
+    height: 200px;
+    box-shadow:  0px 0px 1px 1px  rgb(196, 193, 193);
+    background-color: white;
+}
 
+.box-labels {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+    font-size: 110%;
+    padding: 0px 12px;
+}
 
+.box-labels label {
+    border: 1px solid rgb(9, 70, 70);
+    margin-top: 15px;
+    background-color: rgb(15, 71, 71);
+    padding: 0px 25px;
+    border-radius: 25px;
+}
 
+.date-time-inputs {
+    display: flex;
+    justify-content: space-around;
+    color: rgb(10, 68, 68);
+    font-size: 110%;
+    padding: 0px 12px;
+}
+
+.date-time-inputs input {
+    color: rgb(9, 10, 10);
+    font-weight: 900;
+    font-style: italic;
+    border: none;
+    font-size: 110%;
+    margin-top: 25px;
+}
+
+.currency-wrapper {
+    width: 84%;
+    margin: 0 auto;
+}
+
+.currency {
+    width: 100%;
+    margin-top: 25px;
+    background-color: rgb(15, 54, 54);
+    color: white;
+    border: none;
+    height: 35px;
+    padding: 0px 30%;
+    border-radius: 55px;
+}
+
+.add-share {
+   margin-top: 10%;
+}
+
+.add-share a {
+    margin-right: 40px;
+}
+
+.button-helpers label {
+    margin-top: 15px;
+    font-size: 80%;
+    color: rgb(10, 68, 68);
+    margin-right: 25px;
+}
 
 /*  RESPONSIVE DESIGNS  */
 
