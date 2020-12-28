@@ -572,7 +572,7 @@ body {
 .main-box {
     margin-top: 25px;
     width: 400px;
-    height: 200px;
+    height: 250px;
     box-shadow:  0px 0px 1px 1px  rgb(196, 193, 193);
     background-color: white;
 }
@@ -623,9 +623,23 @@ body {
     border: none;
     height: 35px;
     padding: 0px 30%;
-    border-radius: 55px;
 }
 
+.create-bet-btn {
+    color: white;
+    background-color: rgb(10, 68, 68);
+    padding: 5px 12px;
+    border-radius: 5px;
+    margin-top: 45px;
+    border: 2px solid rgb(10, 68, 68);
+    margin-left: 135px;
+}
+
+.create-bet-btn:hover{
+    background-color: white;
+    border: 2px solid rgb(10, 68, 68);
+    color: rgb(10, 68, 68);
+}
 .add-share {
    margin-top: 10%;
 }

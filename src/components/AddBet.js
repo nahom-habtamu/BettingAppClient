@@ -5,6 +5,59 @@ import { BsFillPersonPlusFill } from 'react-icons/bs';
 import { FaShareAlt } from 'react-icons/fa';
 
 export default class AddBet extends Component {
+    state = {
+        date : {
+            day : "",
+            month : "",
+            year : "",
+        },
+
+        time : {
+            hour : "",
+            minutes : "",
+        },
+
+        currency : ""
+    }
+
+    handleDateChange = (event) => {
+        const date = event.target.value;
+        const pieces = date.split('-');
+        const dateObject = {
+            day : pieces[0],
+            month : pieces[1],
+            year : pieces[2],
+        }
+        this.setState({
+            date : dateObject
+        });
+    }
+
+    handleTimeChange = (event) => {
+        const time = event.target.value;
+        const pieces = time.split(":");
+
+        const timeObject = {
+            hour : pieces[0],
+            minutes : pieces[1]
+        }
+
+        this.setState({
+            time : timeObject
+        })
+    }
+
+    handleSelectChange = (event) => {
+        this.setState({
+            currency : event.target.value
+        });
+    };
+
+    handleSubmit = (event) => {
+        event.preventDefault();
+        console.log(this.state);
+    }
+
     render() {
         return (
             <div>
@@ -24,20 +77,21 @@ export default class AddBet extends Component {
                                         <label className="select-date">Select Date</label>
                                         <label className="select-time">Select time</label>
                                     </div>
-                                    <form>
+                                    <form onSubmit = { this.handleSubmit }>
                                         <div className="date-time-inputs">
-                                            <input type="date"/>
-                                            <input type="time"/>
+                                            <input onChange = {this.handleDateChange } type="date" name="date"/>
+                                            <input onChange = {this.handleTimeChange } type="time" name="time"/>
                                         </div>
                                         <div className="container currency-wrapper">
-                                            <select className="currency">
-                                                <option>Pound</option>
-                                                <option>Dollar</option>
-                                                <option>Yuan</option>
-                                                <option>US Dollar</option>
-                                                <option>Canadian Dollar</option>
+                                            <select onChange = { this.handleSelectChange } className="currency">
+                                                <option value="" default>Currency</option>
+                                                <option value="pound">Pound</option>
+                                                <option value="yuan">Yuan</option>
+                                                <option value="usd">US Dollar</option>
+                                                <option value="canadian dollar">Canadian Dollar</option>
                                             </select>
                                         </div>
+                                        <button className="create-bet-btn">Create Bet</button>
                                     </form>
                                 </div>
                             </div><br/>
